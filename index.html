@@ -14,7 +14,7 @@
   <div class="time"> Time: <span id="timer:"> 0 </span></div>
 
   <div class="container">
-    <div id="start-screen" class="start-quiz">
+    <div id="start-screen" class="start">
       <h1>Coding Quiz Challenge</h1>
       <p>
         Try to answer the following code-related questions within the time limit.
@@ -23,7 +23,7 @@
         <br>
         Good Luck!
       </p>
-      <button id="startBtn">Start Quiz</button>
+      <button id="beginBtn" class="begin">Start Quiz</button>
     </div>
 
     <div id="questions" class="hide">
@@ -31,21 +31,22 @@
       <div id="options" class="answer"></div>
     </div>
 
+    <div id="feedback" class="feedback hide"></div>
+
     <div id="finished" class="hide">
       <h2>All done!</h2>
       <p>
-        Your final score is <span id="finalScore"></span>.
+        Your final score is <span id="score"></span>.
       </p>
       <p>
         Enter your initials: <input type="text" id="initials"></input>
-        <button id="submit"> Submit </button>
+        <button id="submitBtn" class= "submit"> Submit </button>
       </p>
     </div>
   </div>
 
-
-  <script src="./Assets/questions.js"></script>
   <script src="./Assets/quiz.js"></script>
+  <script src="./Assets/questions.js"></script>
 </body>
 
 </html>

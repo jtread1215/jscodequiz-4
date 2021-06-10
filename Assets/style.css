@@ -15,12 +15,37 @@ a {
     border-radius: 7px;
 }
 
-.start-quiz {
-    font-family: Arial;
-    color: black;
+.container {
+    margin: 150px auto 0 auto;
+    max-width: 700px;
+  }
+
+.main {
+    margin: 10px auto 0 auto;
+    max-width: 700px;
 }
 
-.startTime {
+ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
+  
+li {
+    padding: 5px;
+    list-style: decimal inside none;
+}
+  
+li:nth-child(odd) {
+    background-color: #f3edfc;
+}
+
+.begin {
+    font-family: Arial;
+    color: white;
+}
+
+.time {
     font-family: Arial;
     font-size: large;
     background-color: red;
@@ -57,7 +82,16 @@ button {
     text-align: center;
 }
 
-.choices button {
+.options button {
     display: block;
-  }
+}
+
+.feedback {
+    font-style: italic;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: gray;
+    border-top: 2px solid #ccc;
+}
 
