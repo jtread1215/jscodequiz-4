@@ -11,7 +11,7 @@
 <body>
   <div id="highScores"><a href="./highscores.html">View Highscores</a></div>
 
-  <div class="time"> Time: <span id="timer:"> 0 </span></div>
+  <div class="time"> Time: <span id="timer:"> </span></div>
 
   <div class="container">
     <div id="start-screen" class="start">
@@ -26,9 +26,9 @@
       <button id="beginBtn" class="begin">Start Quiz</button>
     </div>
 
-    <div id="questions" class="hide">
+    <div id="questions" class="show">
       <h2 id="questions-title"></h2>
-      <div id="options" class="answer"></div>
+      <div id="choices" class="answer"></div>
     </div>
 
     <div id="feedback" class="feedback hide"></div>
@@ -44,6 +44,9 @@
       </p>
     </div>
   </div>
+  
+
+
 
   <script src="./Assets/quiz.js"></script>
   <script src="./Assets/questions.js"></script>
