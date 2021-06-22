@@ -15,24 +15,24 @@ function startClock() {
   clock = setInterval(function() {
     count--;
     timeEl.textContent = count;
-    if(count >= 0) {
+    if(count <= 0) {
       clearInterval(timerID);
       endQuiz();
     }
-  })
+  }, 1000)
+}
 
-beginBtn.addEventListener("click", startClock)
+
+begin.addEventListener("click", startClock)
 
 function beginQuiz() {
   let startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
   questEl.removeAttribute("class");
   timerID = setInterval(startClock, 1000);
-  timeEl.textContent = time;
+  timeEl.textContent = count;
   renderQuest();
 }
-
-beginBtn,onclick = beginQuiz();
 
 
 function renderQuest() {
@@ -54,11 +54,11 @@ function renderQuest() {
 
 function questClick() {
   if (this.value !== questions[currQuestIndex].answer) {
-    time -= 10;
-    if (time < 0) {
-      time = 0;
+    count -= 10;
+    if (count < 0) {
+      count = 0;
     }
-    timeEl.textContent = time;
+    timeEl.textContent = count;
     feedEl.textContent = "Incorrect!";
   }
     else {
@@ -93,7 +93,7 @@ function savedHighscores() {
   if (initals !== "") {
     let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
     let score = {
-      score: time,
+      score: count,
       initals: initals
     };
     highscores.push(score);
@@ -101,5 +101,7 @@ function savedHighscores() {
     window.location.href= "highscores.html";
   }
 };
-}
+
+beginBtn.onclick = beginQuiz();
+
  
