@@ -23,7 +23,6 @@ function startClock() {
 }
 
 
-begin.addEventListener("click", startClock)
 
 function beginQuiz() {
   let startScreenEl = document.getElementById("start-screen");
