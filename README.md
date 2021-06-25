@@ -14,4 +14,4 @@ The technologies used for this app include:
     CSS
 
 # Links
-Github: https://jtread1215.github.io/jscodequiz-4/
+Github: 
